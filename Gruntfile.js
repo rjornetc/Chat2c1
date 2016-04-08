@@ -17,10 +17,10 @@ module.exports = function(grunt) {
         wiredep: {
             task: {
                 src: [
-                    'public/*.html'
+                    './public/*.html'
                 ],
                 options: {
-                    directory: 'public/libs'
+                    directory: './public/libs'
                 }
             }
         }
