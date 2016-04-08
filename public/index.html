@@ -4,10 +4,16 @@
 	<meta charset="UTF-8">
 	<title>Chat 2c1</title>
 	<script src="/socket.io/socket.io.js"></script>
+	<!-- bower:js -->
+	<!-- endbower -->
 	<script src="main.js"></script>
 </head>
 <body>
 	<h1>Chat room 2c1</h1>
 	<div id="chat"></div>
+	<form>
+		<input type="text" id="cajaT">
+		<input type="submit" onclick="addMessage()" value="Enviar">
+	</form>
 </body>
 </html>

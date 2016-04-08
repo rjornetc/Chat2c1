@@ -12,10 +12,19 @@ module.exports = function(grunt) {
                     cleanBowerDir: true
                 }
             }
+        },
+
+        wiredep: {
+            task: {
+                src: [
+                    'public/*.html'
+                ]
+            }
         }
         
     });
 
     grunt.loadNpmTasks('grunt-bower-task');
+    grunt.loadNpmTasks('grunt-wiredep');
 
 };
