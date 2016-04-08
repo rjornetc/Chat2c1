@@ -1,3 +1,5 @@
+var port = process.env.PORT || 8080;
+
 if(Cookies.get('name') == null) {
 	var resuname = prompt("Introduce nombre de usuario", "");
 	if(resuname != null) {
@@ -7,7 +9,7 @@ if(Cookies.get('name') == null) {
 	}
 }
 
-var socket = io.connect(window.location.hostname+":8080", {'forceNew': true});
+var socket = io.connect(window.location.hostname+":"+port, {'forceNew': true});
 
 function render(data) {
 	var html = data.map(function(elem, index) {
