@@ -7,7 +7,7 @@ if(Cookies.get('name') == null) {
 	}
 }
 
-var socket = io.connect(window.location.hostname, {'forceNew': true});
+var socket = io.connect(location.origin.replace(/^http/, 'ws'));
 
 function render(data) {
 	var html = data.map(function(elem, index) {
