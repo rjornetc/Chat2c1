@@ -1,9 +1,9 @@
-if(Cookie.get('name') == null) {
+if(Cookies.get('name') == null) {
 	var resuname = prompt("Introduce nombre de usuario", "");
 	if(resuname != null) {
-		Cookie.set('name', resuname, {expires: 7, path: '/'});
+		Cookies.set('name', resuname, {expires: 7, path: '/'});
 	} else {
-		Cookie.set('name', 'usuario', {expires: 7, path: 7});
+		Cookies.set('name', 'usuario', {expires: 7, path: 7});
 	}
 }
 
@@ -24,7 +24,7 @@ function addMessage() {
 	var texto = document.getElementById("cajaT");
 	if(texto != null) {
 		var mensaje = {
-			usuario: Cookie.get('name'),
+			usuario: Cookies.get('name'),
 			texto: texto.value
 		};
 		socket.emit('newMessage', mensaje);
