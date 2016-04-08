@@ -7,7 +7,7 @@ if(Cookie.get('name') == null) {
 	}
 }
 
-var socket = io.connect('', {'forceNew': true});
+var socket = io.connect('https://chat2c1.herokuapp.com:8080/', {'forceNew': true});
 
 function render(data) {
 	var html = data.map(function(elem, index) {
