@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "grunt bower && grunt wiredep",
+    "postinstall": "bower install && grunt wiredep",
     "start": "node server/server.js"
   },
   "author": "@Cotel",

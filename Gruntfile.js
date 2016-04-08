@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         bower: {
             install: {
                 options: {
-                    targetDir: './public/bower_components',
+                    targetDir: '.',
                     layout: 'byComponent',
                     install: true,
                     verbose: true,
@@ -17,11 +17,8 @@ module.exports = function(grunt) {
         wiredep: {
             task: {
                 src: [
-                    './public/*.html'
-                ],
-                options: {
-                    directory: './public/bower_components'
-                }
+                    'index.html'
+                ]
             }
         }
         
