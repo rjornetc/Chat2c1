@@ -7,6 +7,10 @@ var mensajes = [];
 
 app.use(express.static('public'));
 
+app.get('/hello', function(req, res) {
+	res.status(200).send("Hello world");
+});
+
 io.on('connection', function(socket) {
 	var address = socket.handshake.address;
 	console.log("Connection from: " + address.address);
