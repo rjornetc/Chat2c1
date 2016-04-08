@@ -15,5 +15,8 @@
     "start": "node server/server.js"
   },
   "author": "@Cotel",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "4.4.2"
+  }
 }
