@@ -7,7 +7,7 @@ if(Cookies.get('name') == null) {
 	}
 }
 
-var socket = io.connect(window.location.hostname, {'forceNew': true});
+var socket = io.connect(window.location.hostname+":8080", {'forceNew': true});
 
 function render(data) {
 	var html = data.map(function(elem, index) {
