@@ -4,11 +4,6 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var port = process.env.PORT || 8080;
 
-io.configure(function () {  
-  	io.set("transports", ["xhr-polling"]); 
-  	io.set("polling duration", 10); 
-});
-
 var mensajes = [];
 
 app.use(express.static('public'));
@@ -18,6 +13,9 @@ app.get('/hello', function(req, res) {
 });
 
 io.on('connection', function(socket) {
+	io.set('transports', ['xhr-polling']);
+	io.set('polling-duration', 10);
+
 	var address = socket.handshake.address;
 	console.log("Connection from: " + address.address);
 	socket.emit('messages', mensajes);
