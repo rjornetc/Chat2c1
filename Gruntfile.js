@@ -18,7 +18,10 @@ module.exports = function(grunt) {
             task: {
                 src: [
                     'public/*.html'
-                ]
+                ],
+                options: {
+                    directory: 'public/libs'
+                }
             }
         }
         
