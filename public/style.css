@@ -15,6 +15,7 @@ strong {
 
 #chat {
     height: 600px;
+    float: left;
     overflow-y: scroll;
 }
 

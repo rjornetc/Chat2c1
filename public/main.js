@@ -12,19 +12,19 @@ var socket = io.connect(window.location.host);
 function render(data) {
 	var html = data.map(function(elem, index) {
 		if(elem.usuario == Cookies.get('name')) {
-			return(`<div class="message float-right">
+			return(`<li class="message">
 					<strong class="float-right">${elem.usuario}: </strong>
-					<em class="me">${elem.texto}</em>
-			</div>`)
+					<em class="me float-right">${elem.texto}</em>
+				</li>`)
 		} else {
-			return(`<div class="message">
+			return(`<li class="message">
 					<strong>${elem.usuario}: </strong>
-					<em>${elem.texto}</em>
-			</div>`)
+					<em>${elem.texto}</em>					
+				</li>`)
 		}
 	}).join(" ");
 
-	document.getElementById('chat').innerHTML = html;
+	document.getElementById('chatdata').innerHTML = html;
 }
 
 function addMessage() {
