@@ -17,7 +17,7 @@ function render(data) {
 					<em id="me">${elem.texto}</em>
 			</div>`)
 		} else {
-			return(`<div>
+			return(`<div id="my-message">
 					<strong>${elem.usuario}: </strong>
 					<em>${elem.texto}</em>
 			</div>`)
