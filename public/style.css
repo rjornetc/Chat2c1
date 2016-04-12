@@ -15,17 +15,7 @@ strong {
 
 #chat {
     height: 600px;
-    float: left;
     overflow-y: scroll;
-}
-
-.message {
-    display: block;
-    max-width: 300px;
-}
-
-.float-right {
-    float: right;
 }
 
 em {
@@ -38,8 +28,14 @@ em {
     padding-left: 4px;
 }
 
-.me {
+#mymessage {
+    float:right;
+    text-align: right;
+}
+
+#me {
     background-color: #9d9;
+    text-align: right;
     border-radius: 8px 0px 8px 8px;
 }
 
