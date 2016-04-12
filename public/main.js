@@ -29,7 +29,7 @@ function render(data) {
 
 function addMessage() {
 	var texto = document.getElementById("cajaT");
-	if(texto != null) {
+	if(texto != null || texto != "") {
 		var mensaje = {
 			usuario: Cookies.get('name'),
 			texto: texto.value

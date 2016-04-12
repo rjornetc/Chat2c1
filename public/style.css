@@ -11,7 +11,6 @@ strong {
 
 #content {
     margin: 0 250px 0 250px;
-    border: solid black 1px;
 }
 
 #chat {
@@ -21,6 +20,7 @@ strong {
 
 em {
     display: block;
+    max-width: 100px;
     background-color: #c7c7c7;
     padding: 8px;
     border-radius: 0px 8px 8px 8px;
