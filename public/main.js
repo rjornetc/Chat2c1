@@ -7,14 +7,21 @@ if(Cookies.get('name') == null) {
 	}
 }
 
-var socket = io.connect(location.origin.replace(/^http/, 'ws'));
+var socket = io.connect(window.location.host);
 
 function render(data) {
 	var html = data.map(function(elem, index) {
-		return(`<div>
-				<strong>${elem.athor}</strong>
-				<em>${elem.text}</em>
-		</div>`)
+		if(elem.usuario == Cookies.get('name')) {
+			return(`<div>
+					<strong>${elem.usuario}: </strong>
+					<em id="me">${elem.texto}</em>
+			</div>`)
+		} else {
+			return(`<div>
+					<strong>${elem.usuario}: </strong>
+					<em>${elem.texto}</em>
+			</div>`)
+		}
 	}).join(" ");
 
 	document.getElementById('chat').innerHTML = html;
@@ -29,8 +36,10 @@ function addMessage() {
 		};
 		socket.emit('newMessage', mensaje);
 	}
+	document.getElementById("cajaT").value = "";
 }
 
 socket.on('messages', function(data) {
 	render(data);
+	$('#chat').scrollTop($("#chat")[0].scrollHeight);
 });

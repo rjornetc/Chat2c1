@@ -1,8 +1,7 @@
 var express = require('express');
 var app = express();
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
-var port = process.env.PORT || 8080;
+var port = process.env.port || 7777;
+var io = require('socket.io').listen(app.listen(port));
 
 var mensajes = [];
 
@@ -13,20 +12,13 @@ app.get('/hello', function(req, res) {
 });
 
 io.on('connection', function(socket) {
-	io.set('transports', ['xhr-polling']);
-	io.set('polling-duration', 10);
-
 	var address = socket.handshake.address;
-	console.log("Connection from: " + address.address);
+	//console.log("Connection from: " + address.address);
 	socket.emit('messages', mensajes);
 
 	socket.on('newMessage', function(data) {
 		mensajes.push(data);
-		console.log(data);
+		//console.log(data);
 		io.sockets.emit('messages', mensajes);
 	});
-});
-
-server.listen(port, function() {
-	console.log("Server running in port" + port);
 });
