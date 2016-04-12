@@ -21,7 +21,6 @@ strong {
 .message {
     display: block;
     max-width: 300px;
-    position: relative;
 }
 
 .float-right {
@@ -29,6 +28,7 @@ strong {
 }
 
 em {
+    display: block;
     max-width: 300px;
     word-wrap: break-word;
     background-color: #c7c7c7;
@@ -39,7 +39,6 @@ em {
 
 .me {
     background-color: #9d9;
-    text-align: right;
     border-radius: 8px 0px 8px 8px;
 }
 
