@@ -5,9 +5,6 @@ body{
 h1 {
     text-align: center;
 }
-strong {
-    display: block;
-}
 
 #content {
     margin: 0 250px 0 250px;
@@ -18,7 +15,7 @@ strong {
     overflow-y: scroll;
 }
 
-em {
+.message-text {
     display: block;
     max-width: 300px;
     word-wrap: break-word;
@@ -28,12 +25,12 @@ em {
     padding-left: 4px;
 }
 
-#mymessage {
+.selfmessage {
     float:right;
     text-align: right;
 }
 
-#me {
+.selfmessage .message-user {
     background-color: #9d9;
     text-align: right;
     border-radius: 8px 0px 8px 8px;
