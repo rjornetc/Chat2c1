@@ -30,10 +30,13 @@ em {
 
 #my-message {
     float:right;
+    text-align: right;
 }
 
 #me {
     background-color: #9d9;
+    text-align: right;
+    border-radius: 8px 0px 8px 8px;
 }
 
 input[type=text]{
