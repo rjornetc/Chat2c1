@@ -12,7 +12,7 @@ var socket = io.connect(window.location.host);
 function render(data) {
 	var html = data.map(function(elem, index) {
 		if(elem.usuario == Cookies.get('name')) {
-			return(`<div id="my-message">
+			return(`<div id="mymessage">
 					<strong>${elem.usuario}: </strong>
 					<em id="me">${elem.texto}</em>
 			</div>`)
