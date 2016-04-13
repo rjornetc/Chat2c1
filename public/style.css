@@ -16,6 +16,10 @@ h1 {
     overflow-y: scroll;
 }
 
+.message {
+    width: 100%;
+}
+
 .message-text {
     float: left;
     max-width: 256px;
