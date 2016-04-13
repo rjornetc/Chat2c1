@@ -17,24 +17,34 @@ h1 {
 }
 
 .message-text {
-    display: block;
-    max-width: 300px;
+    float: left;
+    max-width: 256px;
     word-wrap: break-word;
     background-color: #c7c7c7;
     padding: 8px;
     border-radius: 0px 8px 8px 8px;
-    padding-left: 4px;
 }
 
-.selfmessage {
-    float:right;
-    text-align: right;
+.message-user {
+    float: left;
+    display: block;
 }
+
+.message-user::after {
+    float: left;
+    content: ":";
+}
+
 
 .selfmessage .message-user {
-    background-color: #9d9;
-    text-align: right;
-    border-radius: 8px 0px 8px 8px;
+    float: right;
+}
+
+.selfmessage .message-text {
+    float: right;
+    background-color: #effdde;
+    padding: 8px;
+    border-radius: 8px 9px 8px 8px;
 }
 
 input[type=text]{
